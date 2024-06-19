@@ -1,0 +1,26 @@
+{% extends "base.html" %} {% block title %}Billing{% endblock %} {% block content %}
+<div class="container">
+    <h2>Add Bill</h2>
+    <form method="POST" action="">
+        {{ form.hidden_tag() }}
+        <div>
+            {{ form.order_name.label }}<br> {{ form.order_name(size=32) }}
+        </div>
+        <div>
+            {{ form.order_type.label }}<br> {{ form.order_type() }}
+        </div>
+        <div>
+            {{ form.table_no.label }}<br> {{ form.table_no(size=32) }}
+        </div>
+        <div>
+            {{ form.quantity.label }}<br> {{ form.quantity(size=32) }}
+        </div>
+        <div>
+            {{ form.amount.label }}<br> {{ form.amount(size=32) }}
+        </div>
+        <div>
+            {{ form.submit() }}
+        </div>
+    </form>
+</div>
+{% endblock %}

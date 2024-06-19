@@ -1,0 +1,197 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    animation: fadeIn 1s ease-in;
+    background: url('/static/Modern-Interior-Design-for-Shawarma-Store.jpg') no-repeat center center/cover;
+}
+
+nav {
+    background-color: #333;
+    color: white;
+    padding: 1em;
+    text-align: center;
+    animation: slideIn 1s ease-out;
+}
+
+nav a {
+    color: white;
+    margin: 0 1em;
+    text-decoration: none;
+}
+
+.hero {
+    background: url('') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    animation: zoomIn 1s ease-in-out;
+    color: #fff;
+    border-radius: 20vh;
+}
+
+.hero-text h1 {
+    font-size: 4em;
+    margin: 0;
+    color: black;
+}
+
+.hero-text p {
+    font-size: 1.5em;
+    color: black;
+}
+
+.btn {
+    background-color: #e8491d;
+    color: white;
+    padding: 1em 2em;
+    text-decoration: none;
+    border-radius: 5px;
+    animation: bounce 2s infinite;
+}
+
+.container {
+    max-width: 800px;
+    margin: 2em auto;
+    padding: 2em;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    animation: slideUp 1s ease-in;
+}
+
+.alert {
+    padding: 1em;
+    margin-bottom: 1em;
+    border: 1px solid transparent;
+    border-radius: 0.25em;
+}
+
+.alert-success {
+    color: #155724;
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+}
+
+.alert-danger {
+    color: #721c24;
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+}
+
+form div {
+    margin-bottom: 1em;
+}
+
+form div label {
+    display: block;
+    margin-bottom: 0.5em;
+}
+
+form div input,
+form div select {
+    width: 100%;
+    padding: 0.5em;
+    box-sizing: border-box;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+@keyframes zoomIn {
+    from {
+        transform: scale(0);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+@keyframes bounce {
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-30px);
+    }
+    60% {
+        transform: translateY(-15px);
+    }
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+.branches-section {
+    margin-top: 2em;
+}
+
+.branches {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+}
+
+.branch {
+    background-color: white;
+    padding: 1em;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    flex: 1 1 calc(33.333% - 1em);
+    box-sizing: border-box;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.branch:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.read-more {
+    display: inline-block;
+    margin-top: 1em;
+    background-color: #e8491d;
+    color: white;
+    padding: 0.5em 1em;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.read-more:hover {
+    background-color: #cf3c14;
+}
+
+.branch-detail {
+    background-color: white;
+    padding: 2em;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 2em;
+    animation: slideUp 1s ease-in;
+}

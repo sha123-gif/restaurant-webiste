@@ -1,0 +1,10 @@
+{% extends "base.html" %} {% block title %}{{ title }}{% endblock %} {% block content %}
+<div class="container branch-detail">
+    <h2>{{ branch.name }}</h2>
+    <p><strong>Address:</strong> {{ branch.address }}</p>
+    <p><strong>Pincode:</strong> {{ branch.pincode }}</p>
+    <p><strong>Contact Number:</strong> {{ branch.contact_number }}</p>
+    <p><strong>Contact Person:</strong> {{ branch.contact_person }}</p>
+    <p><strong>Description:</strong> {{ branch.description }}</p>
+</div>
+{% endblock %}

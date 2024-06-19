@@ -1,0 +1,29 @@
+{% extends "base.html" %} {% block title %}Add Branch{% endblock %} {% block content %}
+<div class="container">
+    <h2>Add Branch</h2>
+    <form method="POST" action="">
+        {{ form.hidden_tag() }}
+        <div>
+            {{ form.name.label }}<br> {{ form.name(size=32) }}
+        </div>
+        <div>
+            {{ form.address.label }}<br> {{ form.address(size=64) }}
+        </div>
+        <div>
+            {{ form.pincode.label }}<br> {{ form.pincode(size=10) }}
+        </div>
+        <div>
+            {{ form.contact_number.label }}<br> {{ form.contact_number(size=15) }}
+        </div>
+        <div>
+            {{ form.contact_person.label }}<br> {{ form.contact_person(size=32) }}
+        </div>
+        <div>
+            {{ form.description.label }}<br> {{ form.description(rows=5) }}
+        </div>
+        <div>
+            {{ form.submit() }}
+        </div>
+    </form>
+</div>
+{% endblock %}

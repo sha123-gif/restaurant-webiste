@@ -1,0 +1,13 @@
+{% extends "base.html" %} {% block title %}Revenue{% endblock %} {% block content %}
+<div class="container">
+    <h2>Revenue</h2>
+    <p>Total Revenue: ${{ total_revenue }}</p>
+    <ul>
+        {% for bill in bills %}
+        <li>
+            Order: {{ bill.order_name }} - Quantity: {{ bill.quantity }} - ${{ bill.amount * bill.quantity }} - {{ bill.date_posted.strftime('%Y-%m-%d') }} - Type: {{ bill.order_type }} {% if bill.order_type == 'dine-in' %} - Table: {{ bill.table_no }}{% endif %}
+        </li>
+        {% endfor %}
+    </ul>
+</div>
+{% endblock %}

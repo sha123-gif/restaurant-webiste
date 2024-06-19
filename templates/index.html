@@ -1,0 +1,22 @@
+{% extends "base.html" %} {% block title %}Home{% endblock %} {% block content %}
+<div class="hero">
+    <div class="hero-text">
+        <h1>Welcome to Our Restaurant</h1>
+        <p>Experience the best dining experience with us.</p>
+        <a href="{{ url_for('register') }}" class="btn">Join Us</a>
+    </div>
+</div>
+
+<div class="container branches-section">
+    <h2>Our Branches</h2>
+    <div class="branches">
+        {% for branch in branches %}
+        <div class="branch">
+            <h3>{{ branch.name }}</h3>
+            <p>{{ branch.description[:100] }}...</p>
+            <a href="{{ url_for('branch', branch_id=branch.id) }}" class="read-more">Read More</a>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}
